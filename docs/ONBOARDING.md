@@ -1,7 +1,7 @@
 # Onboarding - Caroline Macedo Advocacia
 
-Roteiro da implantacao. Contratado: R$ 19.997 (entrada de R$ 5.000 paga em 20/10/2026 + R$ 14.997
-no cartao em 19/11/2026). Implantacao prevista em ate 7 dias, com acompanhamento de 90 dias.
+Roteiro da implantacao: prevista em ate 7 dias, com acompanhamento de 90 dias.
+(Condicoes comerciais ficam no contrato, nao neste repositorio.)
 
 ## O que o escritorio precisa entregar
 | Item | Para que | Status |
