@@ -1,0 +1,11 @@
+config/.env
+config/*.json
+config/token*
+config/timbrado_modelo.docx
+__pycache__/
+*.pyc
+SAIDA/*
+!SAIDA/.gitkeep
+DOCS_MODELOS/*
+!DOCS_MODELOS/.gitkeep
+CADASTROS/
