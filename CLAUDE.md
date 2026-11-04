@@ -53,6 +53,23 @@ Gera `SAIDA/casos/<CLIENTE>/DOSSIE_<CLIENTE>.md`: ficha do cliente, numeros prel
 contrato, checklist de documentos que faltam, pendencias de cadastro que travam contrato e
 procuracao, e qual agente acionar. E o que a Luysa le para abrir o caso.
 
+### 3. Relatorio do Meta Ads (bonificacao do contrato)
+```
+python MARKETING/relatorio_meta.py            # ultimo dia fechado (diario)
+python MARKETING/relatorio_meta.py --dias 7   # ultimos 7 dias
+python MARKETING/relatorio_meta.py --exemplo  # formato do relatorio, sem credencial
+```
+Gasto, alcance, cliques, **leads** (conversa no WhatsApp + formulario), **custo por lead** e
+comparacao com o periodo anterior; ranking por campanha e por anuncio; alertas de CPL subindo,
+anuncio gastando sem lead e publico cansado (frequencia alta). Sai em `SAIDA/meta/` em texto e,
+com `--html`, em HTML. **Somente leitura**: `INTEGRACOES/meta_ads_integration.py` nao tem funcao
+de escrita - pausar, ativar e orcamento sao decisao humana no Gerenciador de Anuncios (a conta e
+gerida pela agencia Dig).
+Precisa de `META_ACCESS_TOKEN` (Usuario do Sistema do Business Manager dela, permissao ads_read) e
+`META_AD_ACCOUNT_ID` no `config/.env`. Sem isso o script diz o que falta e nao finge que rodou.
+Lead = conversa iniciada + formulario; **se a conta dela usa outro evento de conversao, ajustar
+`ACAO_CONVERSA`/`ACOES_FORMULARIO` antes de usar o CPL como meta.**
+
 ## Calculo da revisao
 ```
 python CALCULO/calculo_revisional.py --valor 50000 --parcela 1850 --prazo 48 --taxa-media-mensal 2.15 --pagas 14
